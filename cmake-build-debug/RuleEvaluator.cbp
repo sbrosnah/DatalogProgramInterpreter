@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="RuleEvaluator"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/spencerbrosnahan/Desktop/School/FALL SEMESTER 2021/cs236/RuleEvaluator/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/spencerbrosnahan/Desktop/School/FALL\ SEMESTER\ 2021/cs236/RuleEvaluator/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/spencerbrosnahan/Desktop/School/FALL\ SEMESTER\ 2021/cs236/RuleEvaluator/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/spencerbrosnahan/Desktop/School/FALL\ SEMESTER\ 2021/cs236/RuleEvaluator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/spencerbrosnahan/Desktop/School/FALL\ SEMESTER\ 2021/cs236/RuleEvaluator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/spencerbrosnahan/Desktop/School/FALL SEMESTER 2021/cs236/RuleEvaluator/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/spencerbrosnahan/Desktop/School/FALL\ SEMESTER\ 2021/cs236/RuleEvaluator/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/spencerbrosnahan/Desktop/School/FALL\ SEMESTER\ 2021/cs236/RuleEvaluator/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/spencerbrosnahan/Desktop/School/FALL\ SEMESTER\ 2021/cs236/RuleEvaluator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/spencerbrosnahan/Desktop/School/FALL\ SEMESTER\ 2021/cs236/RuleEvaluator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/spencerbrosnahan/Desktop/School/FALL SEMESTER 2021/cs236/RuleEvaluator/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/spencerbrosnahan/Desktop/School/FALL\ SEMESTER\ 2021/cs236/RuleEvaluator/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/spencerbrosnahan/Desktop/School/FALL\ SEMESTER\ 2021/cs236/RuleEvaluator/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/spencerbrosnahan/Desktop/School/FALL\ SEMESTER\ 2021/cs236/RuleEvaluator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/spencerbrosnahan/Desktop/School/FALL\ SEMESTER\ 2021/cs236/RuleEvaluator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="RuleEvaluator">
+				<Option output="/Users/spencerbrosnahan/Desktop/School/FALL SEMESTER 2021/cs236/RuleEvaluator/cmake-build-debug/RuleEvaluator" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/spencerbrosnahan/Desktop/School/FALL SEMESTER 2021/cs236/RuleEvaluator/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/spencerbrosnahan/Desktop/School/FALL\ SEMESTER\ 2021/cs236/RuleEvaluator/cmake-build-debug/Makefile&quot;  VERBOSE=1 RuleEvaluator"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/spencerbrosnahan/Desktop/School/FALL\ SEMESTER\ 2021/cs236/RuleEvaluator/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/spencerbrosnahan/Desktop/School/FALL\ SEMESTER\ 2021/cs236/RuleEvaluator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/spencerbrosnahan/Desktop/School/FALL\ SEMESTER\ 2021/cs236/RuleEvaluator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="RuleEvaluator/fast">
+				<Option output="/Users/spencerbrosnahan/Desktop/School/FALL SEMESTER 2021/cs236/RuleEvaluator/cmake-build-debug/RuleEvaluator" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/spencerbrosnahan/Desktop/School/FALL SEMESTER 2021/cs236/RuleEvaluator/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/spencerbrosnahan/Desktop/School/FALL\ SEMESTER\ 2021/cs236/RuleEvaluator/cmake-build-debug/Makefile&quot;  VERBOSE=1 RuleEvaluator/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/spencerbrosnahan/Desktop/School/FALL\ SEMESTER\ 2021/cs236/RuleEvaluator/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/spencerbrosnahan/Desktop/School/FALL\ SEMESTER\ 2021/cs236/RuleEvaluator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/spencerbrosnahan/Desktop/School/FALL\ SEMESTER\ 2021/cs236/RuleEvaluator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/spencerbrosnahan/Desktop/School/FALL SEMESTER 2021/cs236/RuleEvaluator/Automaton.h">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/Users/spencerbrosnahan/Desktop/School/FALL SEMESTER 2021/cs236/RuleEvaluator/BlockCommentAutomaton.cpp">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/Users/spencerbrosnahan/Desktop/School/FALL SEMESTER 2021/cs236/RuleEvaluator/BlockCommentAutomaton.h">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/Users/spencerbrosnahan/Desktop/School/FALL SEMESTER 2021/cs236/RuleEvaluator/ColonAutomaton.cpp">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/Users/spencerbrosnahan/Desktop/School/FALL SEMESTER 2021/cs236/RuleEvaluator/ColonAutomaton.h">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/Users/spencerbrosnahan/Desktop/School/FALL SEMESTER 2021/cs236/RuleEvaluator/ColonDashAutomaton.cpp">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/Users/spencerbrosnahan/Desktop/School/FALL SEMESTER 2021/cs236/RuleEvaluator/ColonDashAutomaton.h">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/Users/spencerbrosnahan/Desktop/School/FALL SEMESTER 2021/cs236/RuleEvaluator/CommaAutomaton.cpp">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/Users/spencerbrosnahan/Desktop/School/FALL SEMESTER 2021/cs236/RuleEvaluator/CommaAutomaton.h">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/Users/spencerbrosnahan/Desktop/School/FALL SEMESTER 2021/cs236/RuleEvaluator/CommentAutomaton.cpp">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/Users/spencerbrosnahan/Desktop/School/FALL SEMESTER 2021/cs236/RuleEvaluator/CommentAutomaton.h">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/Users/spencerbrosnahan/Desktop/School/FALL SEMESTER 2021/cs236/RuleEvaluator/Database.cpp">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/Users/spencerbrosnahan/Desktop/School/FALL SEMESTER 2021/cs236/RuleEvaluator/Database.h">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/Users/spencerbrosnahan/Desktop/School/FALL SEMESTER 2021/cs236/RuleEvaluator/DatalogProgram.cpp">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/Users/spencerbrosnahan/Desktop/School/FALL SEMESTER 2021/cs236/RuleEvaluator/DatalogProgram.h">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/Users/spencerbrosnahan/Desktop/School/FALL SEMESTER 2021/cs236/RuleEvaluator/Header.cpp">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/Users/spencerbrosnahan/Desktop/School/FALL SEMESTER 2021/cs236/RuleEvaluator/Header.h">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/Users/spencerbrosnahan/Desktop/School/FALL SEMESTER 2021/cs236/RuleEvaluator/ID_Automaton.cpp">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/Users/spencerbrosnahan/Desktop/School/FALL SEMESTER 2021/cs236/RuleEvaluator/ID_Automaton.h">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/Users/spencerbrosnahan/Desktop/School/FALL SEMESTER 2021/cs236/RuleEvaluator/Interpreter.cpp">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/Users/spencerbrosnahan/Desktop/School/FALL SEMESTER 2021/cs236/RuleEvaluator/Interpreter.h">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/Users/spencerbrosnahan/Desktop/School/FALL SEMESTER 2021/cs236/RuleEvaluator/Lexer.cpp">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/Users/spencerbrosnahan/Desktop/School/FALL SEMESTER 2021/cs236/RuleEvaluator/Lexer.h">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/Users/spencerbrosnahan/Desktop/School/FALL SEMESTER 2021/cs236/RuleEvaluator/MatcherFSA.cpp">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/Users/spencerbrosnahan/Desktop/School/FALL SEMESTER 2021/cs236/RuleEvaluator/MatcherFSA.h">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/Users/spencerbrosnahan/Desktop/School/FALL SEMESTER 2021/cs236/RuleEvaluator/Parameter.cpp">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/Users/spencerbrosnahan/Desktop/School/FALL SEMESTER 2021/cs236/RuleEvaluator/Parameter.h">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/Users/spencerbrosnahan/Desktop/School/FALL SEMESTER 2021/cs236/RuleEvaluator/Parser.cpp">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/Users/spencerbrosnahan/Desktop/School/FALL SEMESTER 2021/cs236/RuleEvaluator/Parser.h">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/Users/spencerbrosnahan/Desktop/School/FALL SEMESTER 2021/cs236/RuleEvaluator/ParserHelper.cpp">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/Users/spencerbrosnahan/Desktop/School/FALL SEMESTER 2021/cs236/RuleEvaluator/ParserHelper.h">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/Users/spencerbrosnahan/Desktop/School/FALL SEMESTER 2021/cs236/RuleEvaluator/Predicate.cpp">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/Users/spencerbrosnahan/Desktop/School/FALL SEMESTER 2021/cs236/RuleEvaluator/Predicate.h">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/Users/spencerbrosnahan/Desktop/School/FALL SEMESTER 2021/cs236/RuleEvaluator/Relation.cpp">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/Users/spencerbrosnahan/Desktop/School/FALL SEMESTER 2021/cs236/RuleEvaluator/Relation.h">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/Users/spencerbrosnahan/Desktop/School/FALL SEMESTER 2021/cs236/RuleEvaluator/Rule.cpp">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/Users/spencerbrosnahan/Desktop/School/FALL SEMESTER 2021/cs236/RuleEvaluator/Rule.h">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/Users/spencerbrosnahan/Desktop/School/FALL SEMESTER 2021/cs236/RuleEvaluator/StringAutomaton.cpp">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/Users/spencerbrosnahan/Desktop/School/FALL SEMESTER 2021/cs236/RuleEvaluator/StringAutomaton.h">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/Users/spencerbrosnahan/Desktop/School/FALL SEMESTER 2021/cs236/RuleEvaluator/Token.cpp">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/Users/spencerbrosnahan/Desktop/School/FALL SEMESTER 2021/cs236/RuleEvaluator/Token.h">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/Users/spencerbrosnahan/Desktop/School/FALL SEMESTER 2021/cs236/RuleEvaluator/Tuple.cpp">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/Users/spencerbrosnahan/Desktop/School/FALL SEMESTER 2021/cs236/RuleEvaluator/Tuple.h">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/Users/spencerbrosnahan/Desktop/School/FALL SEMESTER 2021/cs236/RuleEvaluator/main.cpp">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/Users/spencerbrosnahan/Desktop/School/FALL SEMESTER 2021/cs236/RuleEvaluator/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

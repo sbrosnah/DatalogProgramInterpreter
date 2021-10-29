@@ -1,0 +1,33 @@
+(COMMENT,"# COPYRIGHT © BRIGHAM YOUNG UNIVERSITY CS 236",1)
+(COMMENT,"# FOR USE ONLY DURING SPRING 2021 SEMESTER",2)
+(COMMENT,"#||##||# Schemes:",5)
+(COMMENT,"#||##||#   snap(S,N,A,P)",6)
+(COMMENT,"#||##||#   csg(C,S,G)",7)
+(COMMENT,"#||##||#   cp(C,Q)",8)
+(COMMENT,"#||##||# Facts:",10)
+(COMMENT,"#||##||#    snap('1234','Charley','Apple St','555-1234'). ",11)
+(COMMENT,"#||##||#    snap('1111','Linus','Piano St','555-1111'). ",12)
+(COMMENT,"#||##||#    snap('1212','Lucy','Home Ln','555-1212'). ",13)
+(COMMENT,"#||##||#    snap('3333','Marcie','Banana St','555-3333'). ",14)
+(COMMENT,"#||##||#    csg('CS101','1234','A').",15)
+(COMMENT,"#||##||#    csg('CS101','3333','B').",16)
+(COMMENT,"#||##||#    csg('CS101','5678','B-').",17)
+(COMMENT,"#||##||#    cp('CS101','CS100').",18)
+(COMMENT,"#||##||#    cp('EE200','EE005').",19)
+(COMMENT,"#| This is a multiline comment with nested single-line comments
+# The whole thing
+# Should be treated
+# As one big multiline comment
+|#",21)
+(COMMENT,"#||##||# Rules:",27)
+(COMMENT,"#||##||#    before(C1,C2):-cp(C2,C1).",28)
+(COMMENT,"#||##||#    before(C1,C2):-cp(C3,C1),before(C3,C2).",29)
+(COMMENT,"#||##||#    mwfCourses(C,R):-cdh(C,'M',H),cr(C,R).",30)
+(COMMENT,"#||##||#    mwfCourses(C,R):-cdh(C,'W',H),cr(C,R).",31)
+(COMMENT,"#||##||# Queries:",33)
+(COMMENT,"#||##||#    snap(S,N,A,P)?",34)
+(COMMENT,"#||##||#    snap(Id,'Snoopy',Address,Phone)?",35)
+(COMMENT,"#||##||#    csg(Course,'33333',Grade)?",36)
+(COMMENT,"#||##||#    cp(Course,'CS100')?",37)
+(EOF,"",38)
+Total Tokens = 28
