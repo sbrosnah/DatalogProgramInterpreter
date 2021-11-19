@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="RuleEvaluator"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/users/guest/s/sbrosnah/cs236/RuleEvaluator/cmake-build-debug-schizo"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j20 -f &quot;/users/guest/s/sbrosnah/cs236/RuleEvaluator/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j20 -f &quot;/users/guest/s/sbrosnah/cs236/RuleEvaluator/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j20 -f &quot;/users/guest/s/sbrosnah/cs236/RuleEvaluator/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j20 -f &quot;/users/guest/s/sbrosnah/cs236/RuleEvaluator/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/users/guest/s/sbrosnah/cs236/RuleEvaluator/cmake-build-debug-schizo"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j20 -f &quot;/users/guest/s/sbrosnah/cs236/RuleEvaluator/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j20 -f &quot;/users/guest/s/sbrosnah/cs236/RuleEvaluator/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j20 -f &quot;/users/guest/s/sbrosnah/cs236/RuleEvaluator/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j20 -f &quot;/users/guest/s/sbrosnah/cs236/RuleEvaluator/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/users/guest/s/sbrosnah/cs236/RuleEvaluator/cmake-build-debug-schizo"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j20 -f &quot;/users/guest/s/sbrosnah/cs236/RuleEvaluator/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j20 -f &quot;/users/guest/s/sbrosnah/cs236/RuleEvaluator/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j20 -f &quot;/users/guest/s/sbrosnah/cs236/RuleEvaluator/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j20 -f &quot;/users/guest/s/sbrosnah/cs236/RuleEvaluator/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="RuleEvaluator">
+				<Option output="/users/guest/s/sbrosnah/cs236/RuleEvaluator/cmake-build-debug-schizo/RuleEvaluator" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/users/guest/s/sbrosnah/cs236/RuleEvaluator/cmake-build-debug-schizo"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j20 -f &quot;/users/guest/s/sbrosnah/cs236/RuleEvaluator/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 RuleEvaluator"/>
+					<CompileFile command="/usr/bin/make -j20 -f &quot;/users/guest/s/sbrosnah/cs236/RuleEvaluator/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j20 -f &quot;/users/guest/s/sbrosnah/cs236/RuleEvaluator/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j20 -f &quot;/users/guest/s/sbrosnah/cs236/RuleEvaluator/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="RuleEvaluator/fast">
+				<Option output="/users/guest/s/sbrosnah/cs236/RuleEvaluator/cmake-build-debug-schizo/RuleEvaluator" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/users/guest/s/sbrosnah/cs236/RuleEvaluator/cmake-build-debug-schizo"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j20 -f &quot;/users/guest/s/sbrosnah/cs236/RuleEvaluator/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 RuleEvaluator/fast"/>
+					<CompileFile command="/usr/bin/make -j20 -f &quot;/users/guest/s/sbrosnah/cs236/RuleEvaluator/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j20 -f &quot;/users/guest/s/sbrosnah/cs236/RuleEvaluator/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j20 -f &quot;/users/guest/s/sbrosnah/cs236/RuleEvaluator/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/users/guest/s/sbrosnah/cs236/RuleEvaluator/Automaton.h">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/users/guest/s/sbrosnah/cs236/RuleEvaluator/BlockCommentAutomaton.cpp">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/users/guest/s/sbrosnah/cs236/RuleEvaluator/BlockCommentAutomaton.h">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/users/guest/s/sbrosnah/cs236/RuleEvaluator/ColonAutomaton.cpp">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/users/guest/s/sbrosnah/cs236/RuleEvaluator/ColonAutomaton.h">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/users/guest/s/sbrosnah/cs236/RuleEvaluator/ColonDashAutomaton.cpp">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/users/guest/s/sbrosnah/cs236/RuleEvaluator/ColonDashAutomaton.h">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/users/guest/s/sbrosnah/cs236/RuleEvaluator/CommaAutomaton.cpp">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/users/guest/s/sbrosnah/cs236/RuleEvaluator/CommaAutomaton.h">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/users/guest/s/sbrosnah/cs236/RuleEvaluator/CommentAutomaton.cpp">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/users/guest/s/sbrosnah/cs236/RuleEvaluator/CommentAutomaton.h">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/users/guest/s/sbrosnah/cs236/RuleEvaluator/Database.cpp">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/users/guest/s/sbrosnah/cs236/RuleEvaluator/Database.h">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/users/guest/s/sbrosnah/cs236/RuleEvaluator/DatalogProgram.cpp">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/users/guest/s/sbrosnah/cs236/RuleEvaluator/DatalogProgram.h">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/users/guest/s/sbrosnah/cs236/RuleEvaluator/Header.cpp">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/users/guest/s/sbrosnah/cs236/RuleEvaluator/Header.h">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/users/guest/s/sbrosnah/cs236/RuleEvaluator/ID_Automaton.cpp">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/users/guest/s/sbrosnah/cs236/RuleEvaluator/ID_Automaton.h">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/users/guest/s/sbrosnah/cs236/RuleEvaluator/Interpreter.cpp">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/users/guest/s/sbrosnah/cs236/RuleEvaluator/Interpreter.h">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/users/guest/s/sbrosnah/cs236/RuleEvaluator/Lexer.cpp">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/users/guest/s/sbrosnah/cs236/RuleEvaluator/Lexer.h">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/users/guest/s/sbrosnah/cs236/RuleEvaluator/MatcherFSA.cpp">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/users/guest/s/sbrosnah/cs236/RuleEvaluator/MatcherFSA.h">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/users/guest/s/sbrosnah/cs236/RuleEvaluator/Parameter.cpp">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/users/guest/s/sbrosnah/cs236/RuleEvaluator/Parameter.h">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/users/guest/s/sbrosnah/cs236/RuleEvaluator/Parser.cpp">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/users/guest/s/sbrosnah/cs236/RuleEvaluator/Parser.h">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/users/guest/s/sbrosnah/cs236/RuleEvaluator/ParserHelper.cpp">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/users/guest/s/sbrosnah/cs236/RuleEvaluator/ParserHelper.h">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/users/guest/s/sbrosnah/cs236/RuleEvaluator/Predicate.cpp">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/users/guest/s/sbrosnah/cs236/RuleEvaluator/Predicate.h">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/users/guest/s/sbrosnah/cs236/RuleEvaluator/Relation.cpp">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/users/guest/s/sbrosnah/cs236/RuleEvaluator/Relation.h">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/users/guest/s/sbrosnah/cs236/RuleEvaluator/Rule.cpp">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/users/guest/s/sbrosnah/cs236/RuleEvaluator/Rule.h">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/users/guest/s/sbrosnah/cs236/RuleEvaluator/StringAutomaton.cpp">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/users/guest/s/sbrosnah/cs236/RuleEvaluator/StringAutomaton.h">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/users/guest/s/sbrosnah/cs236/RuleEvaluator/Token.cpp">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/users/guest/s/sbrosnah/cs236/RuleEvaluator/Token.h">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/users/guest/s/sbrosnah/cs236/RuleEvaluator/Tuple.cpp">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/users/guest/s/sbrosnah/cs236/RuleEvaluator/Tuple.h">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/users/guest/s/sbrosnah/cs236/RuleEvaluator/main.cpp">
+			<Option target="RuleEvaluator"/>
+		</Unit>
+		<Unit filename="/users/guest/s/sbrosnah/cs236/RuleEvaluator/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

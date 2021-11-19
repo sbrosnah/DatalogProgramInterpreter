@@ -23,3 +23,7 @@ void Header::ProjectAttributes(std::map<std::string, std::vector<int>> variableO
 void Header::EditAttribute(int index, std::string attribute){
     attributes.at(index) = attribute;
 }
+
+void Header::AddAttribute(std::string attribute) {
+    attributes.push_back(attribute);
+}

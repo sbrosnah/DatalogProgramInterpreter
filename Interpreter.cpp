@@ -16,6 +16,7 @@ void Interpreter::Run() {
     try{
         EvaluateSchemes();
         EvaluateFacts();
+        EvaluateRules();
         EvaluateQueries();
     } catch (std::string error){
         std::cout << error << std::endl;
@@ -52,11 +53,40 @@ void Interpreter::EvaluateFacts() {
 }
 
 void Interpreter::EvaluateQueries() {
+    ss << "Query Evaluation" << std::endl;
     for(unsigned int i = 0; i < program->queries.size(); i++) {
         Predicate* query = program->queries.at(i);
         Relation* currRelation = EvaluatePredicate(query);
         ss << currRelation->ToString();
     }
+}
+
+void Interpreter::EvaluateHeadPredicate(Predicate *headPredicate, Relation *finalRelation){
+    std::string relationName = headPredicate->id;
+    finalRelation->SetName(relationName);
+    std::vector<Parameter *> parameters = headPredicate->parameters;
+    std::vector<std::string> variables;
+    std::map<std::string, std::vector<int>> variableOccurranceIndices;
+    std::vector<std::string> relationHeader = finalRelation->GetHeader();
+
+    for(unsigned int i = 0; i < parameters.size(); i++){
+        variables.push_back(parameters.at(i)->p);
+    }
+
+    for(unsigned int i = 0; i < relationHeader.size(); i++){
+        for(unsigned int j = 0; j < variables.size(); j++){
+            if(relationHeader.at(i) == variables.at(j)){
+                std::vector<int> indices;
+                indices.push_back(i);
+                indices.push_back(j);
+                variableOccurranceIndices[relationHeader.at(i)] = indices;
+            }
+        }
+    }
+    Relation* relationAddedTo = database->GetRelation(relationName);
+    std::vector<std::string> newHeader = relationAddedTo->GetHeader();
+    finalRelation->ProjectTuples(variableOccurranceIndices);
+    finalRelation->SetHeader(newHeader);
 }
 
 Relation* Interpreter::EvaluatePredicate(Predicate *query) {
@@ -113,4 +143,78 @@ Relation* Interpreter::EvaluatePredicate(Predicate *query) {
 void Interpreter::ToString() {
     std::cout << ss.str();
 }
+
+void Interpreter::OutputRules(){
+
+}
+
+void Interpreter::EvaluateRules() {
+    bool ruleAdded = true;
+    ss << "Rule Evaluation" << std::endl;
+    while(ruleAdded){
+        try{
+            ruleAdded = EvaluateRulesHelper();
+            iterations += 1;
+        } catch(std::string err){
+            std::cout << err << std::endl;
+        }
+    }
+    ss << std::endl;
+    ss << "Schemes populated after " << iterations << " passes through the Rules." << std::endl;
+    ss << std::endl;
+}
+
+bool Interpreter::EvaluateRulesHelper() {
+    bool addedTuple = false;
+    for(unsigned int i = 0; i < program->rules.size(); i++){
+        bool added = false;
+        std::vector<Relation*> intermediateRelations;
+        std::string ruleName = program->rules.at(i)->ToString();
+        for(unsigned int j = 0; j < program->rules.at(i)->bodyPredicates.size(); j++){
+            Predicate* currPredicate = program->rules.at(i)->bodyPredicates.at(j);
+            Relation* newRelation;
+            newRelation = EvaluatePredicate(currPredicate);
+            intermediateRelations.push_back(newRelation);
+        }
+        Relation* finalRelation = new Relation();
+        if(intermediateRelations.size() > 1){
+            finalRelation = Join(intermediateRelations);
+        } else if(intermediateRelations.size() == 1){
+            finalRelation = intermediateRelations.at(0);
+        } else {
+            throw "No relations with those names";
+        }
+        Predicate* headPredicate = program->rules.at(i)->headPredicate;
+        EvaluateHeadPredicate(headPredicate, finalRelation);
+        Relation* originalRelation = database->GetRelation(finalRelation->GetName());
+        std::set<Tuple> finalRelationTuples = finalRelation->GetTuples();
+        added = originalRelation->Union(finalRelationTuples);
+        finalRelation->SetTuples(finalRelationTuples);
+        finalRelation->SetName(program->rules.at(i)->ToString());
+        finalRelation->ToggleIsRule();
+        ss << finalRelation->ToString();
+        delete finalRelation;
+        if(added == true){
+            addedTuple = true;
+        }
+    }
+    return addedTuple;
+}
+
+Relation* Interpreter::Join(std::vector<Relation*> intermediateRelations) {
+    Relation* firstRelation = intermediateRelations.at(0);
+    Relation* secondRelation;
+    std::vector<std::string> secondHeader;
+    std::set<Tuple> secondTuples;
+    for(unsigned int i = 1; i < intermediateRelations.size(); i++){
+        secondRelation = intermediateRelations.at(i);
+        secondHeader = secondRelation->GetHeader();
+        secondTuples = secondRelation->GetTuples();
+        firstRelation->Join(secondHeader, secondTuples);
+    }
+    return firstRelation;
+}
+
+
+
 

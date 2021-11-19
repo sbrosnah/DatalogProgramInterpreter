@@ -102,20 +102,43 @@ void Relation::ProjectTuples(std::map<std::string, std::vector<int>> variableOcc
 
     //Remember, we have already checked that each mapped variable has only one value in the vector associated to it.
     //create a set of the indices so that we can quickly check if the index of a value in a tuple is associated with the index of the variable.
+    bool isHeadPredicateEvaluation = false;
     for(std::map<std::string, std::vector<int>>::iterator it = variableOccurranceIndices.begin(); it != variableOccurranceIndices.end(); it++){
+        if(it->second.size() > 1){
+            isHeadPredicateEvaluation = true;
+        }
         indices.insert(it->second.at(0));
     }
+
+
     //loop through all of my tuples
-    for(Tuple tuple : tuples){
+    for(Tuple tuple : this->tuples){
         //Get the values in the current tuple of the iteration.
         std::vector<std::string> oldValues = tuple.GetValues();
         //create a new tuple so that we can push only the variable values into it.
         Tuple newTuple;
         //loop through the tuple values
-        for(unsigned int i = 0; i < oldValues.size(); i++){
-            //check the set of indices to see if the current index of the values is the index of a variable, if so, Add it to our new tuple.
-            if(indices.find(i) != indices.end()){
-                newTuple.AddValue(oldValues.at(i));
+        if(!isHeadPredicateEvaluation){
+            for(unsigned int i = 0; i < oldValues.size(); i++){
+                //check the set of indices to see if the current index of the values is the index of a variable, if so, Add it to our new tuple.
+                if(indices.find(i) != indices.end()){
+                    newTuple.AddValue(oldValues.at(i));
+                }
+            }
+        } else {
+            unsigned int arraySize = variableOccurranceIndices.size();
+            std::vector<std::string> values;
+            std::vector<std::string> oldHeader = header->GetAttributes();
+            for(unsigned int i = 0; i < arraySize; i++){
+                values.push_back("");
+            }
+            for(unsigned int i = 0; i < oldHeader.size(); i++){
+                if(variableOccurranceIndices.find(oldHeader.at(i)) != variableOccurranceIndices.end()){
+                    values.at(variableOccurranceIndices[oldHeader.at(i)].at(1)) = oldValues.at(i);
+                }
+            }
+            for(unsigned int i = 0; i < arraySize; i++){
+                newTuple.AddValue(values.at(i));
             }
         }
         //insert the new tuple into a set of tuples so that we don't get any repeating ones.
@@ -143,13 +166,30 @@ void Relation::Rename(std::vector<std::string> variables) {
     }
 }
 
+void Relation::ToggleIsRule() {
+    if(isRule == false){
+        isRule = true;
+    } else {
+        isRule = false;
+    }
+}
+
 std::string Relation::ToString() {
     std::stringstream ss;
-    ss << this->name << " ";
-    if(tuples.empty()){
-        ss << "No" << std::endl;
+    ss << this->name;
+    if(!isRule){
+        ss << " ";
     } else {
-        ss << "Yes(" << tuples.size() << ")" << std::endl;
+        ss << std::endl;
+    }
+    if(tuples.empty()){
+        if(!isRule){
+            ss << "No" << std::endl;
+        }
+    } else {
+        if(!isRule){
+            ss << "Yes(" << tuples.size() << ")" << std::endl;
+        }
         if(!variablesWithValues.empty()){
             std::vector<std::string> variables = header->GetAttributes();
             for(Tuple tuple : tuples){
@@ -187,5 +227,102 @@ void Relation::SetMap(std::map<std::string, std::vector<int>> variableOccurrance
         }
     }
 }
+
+void Relation::Join(std::vector<std::string> secondHeader, std::set<Tuple> secondTuples){
+    JoinHeaders(secondHeader);
+    std::set<Tuple> oldTuples = tuples;
+    tuples.clear();
+    JoinTuples(oldTuples, secondTuples);
+    commonIndicesFirst.clear();
+    commonIndicesSecond.clear();
+}
+
+void Relation::JoinTuples(std::set<Tuple> oldTuples, std::set<Tuple> secondTuples){
+    for(Tuple tuple : oldTuples){
+        for (Tuple secondTuple : secondTuples){
+            if(commonIndicesFirst.size() > 0){
+                bool equal = CheckEquality(tuple, secondTuple);
+                if(equal){
+                    tuples.insert(CreateJoinedTuple(tuple, secondTuple));
+                }
+            } else {
+                Tuple newTuple;
+                newTuple.SetValues(tuple.GetValues());
+                std::vector<std::string> secondTupleValues = secondTuple.GetValues();
+                for(unsigned int i = 0; i < secondTupleValues.size(); i++){
+                    newTuple.AddValue(secondTupleValues.at(i));
+                }
+                tuples.insert(newTuple);
+            }
+        }
+    }
+}
+
+Tuple Relation::CreateJoinedTuple(Tuple tupleOne, Tuple tupleTwo){
+    std::set<int> commonIndices;
+    for(unsigned int i = 0; i < commonIndicesSecond.size(); i++){
+        commonIndices.insert(commonIndicesSecond.at(i));
+    }
+    std::vector<std::string> newValues = tupleOne.GetValues();
+    std::vector<std::string> secondValues = tupleTwo.GetValues();
+    for(unsigned int i = 0; i < secondValues.size(); i++){
+        if(commonIndices.find(i) == commonIndices.end()){
+            newValues.push_back(secondValues.at(i));
+        }
+    }
+    Tuple newTuple;
+    newTuple.SetValues(newValues);
+    return newTuple;
+}
+
+bool Relation::CheckEquality(Tuple tupleOne, Tuple tupleTwo){
+    std::vector<std::string> tupleValsOne = tupleOne.GetValues();
+    std::vector<std::string> tupleValsTwo = tupleTwo.GetValues();
+    //because we know that commonIndicesFirst and commonIndicesSecond will be the same size and the index of the index correlate to the same
+    //value, we only need to iterate through one of them.
+    bool areEqual = true;
+    for(unsigned int i = 0; i < commonIndicesFirst.size(); i++){
+        if(tupleValsOne.at(commonIndicesFirst.at(i)) != tupleValsTwo.at(commonIndicesSecond.at(i))){
+            areEqual = false;
+        }
+    }
+    return areEqual;
+}
+
+void Relation::JoinHeaders(std::vector<std::string> secondHeader){
+    std::map<std::string, int> currHeaderInd;
+    std::vector<std::string> thisHeader = header->GetAttributes();
+
+    for(unsigned int i = 0; i < thisHeader.size(); i++){
+        currHeaderInd[thisHeader.at(i)] = i;
+    }
+    for(unsigned int i = 0; i < secondHeader.size(); i++){
+        std::string currAttribute = secondHeader.at(i);
+        std::map<std::string, int>::iterator it;
+        it = currHeaderInd.find(currAttribute);
+        if(it != currHeaderInd.end()){
+            commonIndicesFirst.push_back(it->second);
+            commonIndicesSecond.push_back(i);
+        } else {
+            header->AddAttribute(currAttribute);
+        }
+    }
+}
+
+bool Relation::Union(std::set<Tuple>& tuplesToAdd){
+    bool addedTuples = false;
+    std::set<Tuple> tuplesAdded;
+    for(Tuple tuple : tuplesToAdd){
+        bool added = false;
+        added = tuples.insert(tuple).second;
+        if(added){
+            addedTuples = true;
+            tuplesAdded.insert(tuple);
+        }
+    }
+    tuplesToAdd = tuplesAdded;
+    return addedTuples;
+}
+
 
 

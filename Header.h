@@ -13,7 +13,7 @@ public:
     Header(){};
     ~Header(){};
     void SetAttributes(std::vector<std::string> attributes);
-    void AddAttribute(std::string);
+    void AddAttribute(std::string attribute);
     void GetAttribute(int index);
     void ProjectAttributes(std::map<std::string, std::vector<int>> variableOccurranceIndices);
     std::vector<std::string> GetAttributes();

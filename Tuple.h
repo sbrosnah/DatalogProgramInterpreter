@@ -18,6 +18,7 @@ public:
     std::string GetValue(int index);
     std::vector<std::string> GetValues();
     void EditValue(int index, std::string value);
+    void EraseValue(int index);
 };
 
 #endif

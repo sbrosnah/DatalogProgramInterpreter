@@ -17,3 +17,10 @@ std::vector<std::string> Tuple::GetValues(){
 void Tuple::AddValue(std::string value) {
     this->values.push_back(value);
 }
+
+void Tuple::EraseValue(int index) {
+    long unsigned int castedInt = (long unsigned int) index;
+    if(castedInt < values.size()){
+        values.erase(values.begin() + index);
+    }
+}

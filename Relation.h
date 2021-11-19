@@ -17,6 +17,13 @@ private:
     std::set<Tuple> tuples;
     Header* header;
     std::map<std::string, std::vector<std::string>> variablesWithValues;
+    std::vector<int> commonIndicesFirst;
+    std::vector<int> commonIndicesSecond;
+    bool CheckEquality(Tuple tupleOne, Tuple tupleTwo);
+    Tuple CreateJoinedTuple(Tuple tupleOne, Tuple tupleTwo);
+    void JoinHeaders(std::vector<std::string> secondHeader);
+    void JoinTuples(std::set<Tuple> oldTuples, std::set<Tuple> secondTuples);
+    bool isRule = false;
 public:
     Relation(){};
     ~Relation();
@@ -35,7 +42,10 @@ public:
     void ProjectTuples(std::map<std::string, std::vector<int>> variableOccurranceIndices);
     void Rename(std::vector<std::string> variables);
     void SetMap(std::map<std::string, std::vector<int>> variableOccurranceIndices);
+    void Join(std::vector<std::string> secondHeader, std::set<Tuple> secondTuples);
+    bool Union(std::set<Tuple>& tuplesToAdd);
     std::string ToString();
+    void ToggleIsRule();
 };
 
 #endif
